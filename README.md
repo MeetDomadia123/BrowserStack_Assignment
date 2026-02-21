@@ -62,7 +62,12 @@ mvn compile exec:java -Dexec.mainClass="com.browserstack.ElPaisScraper"
 ```
 
 ### Run on BrowserStack (5 Parallel Threads)
-Update your BrowserStack credentials in `BrowserStackTest.java`, then:
+Set your BrowserStack credentials as environment variables:
+```bash
+export BROWSERSTACK_USERNAME="your_username"
+export BROWSERSTACK_ACCESS_KEY="your_access_key"
+```
+Then run:
 ```bash
 mvn test
 ```

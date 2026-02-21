@@ -11,8 +11,10 @@ import java.util.*;
 
 public class BrowserStackTest {
 
-    private static final String BROWSERSTACK_USERNAME = "meetdomadia_IDcT50";
-    private static final String BROWSERSTACK_ACCESS_KEY = "EqQvuZUXztdetCvMsGjy";
+    private static final String BROWSERSTACK_USERNAME = System.getenv("BROWSERSTACK_USERNAME") != null
+            ? System.getenv("BROWSERSTACK_USERNAME") : "YOUR_BROWSERSTACK_USERNAME";
+    private static final String BROWSERSTACK_ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY") != null
+            ? System.getenv("BROWSERSTACK_ACCESS_KEY") : "YOUR_BROWSERSTACK_ACCESS_KEY";
     private static final String BROWSERSTACK_URL = "https://" + BROWSERSTACK_USERNAME + ":" + BROWSERSTACK_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
     @DataProvider(name = "browserConfigs", parallel = true)
